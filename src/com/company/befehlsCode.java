@@ -1,6 +1,7 @@
 package com.company;
 
 public class befehlsCode {
+    //DatenTyp ArrayList
     String pos;
     String befehl;
     double x;
