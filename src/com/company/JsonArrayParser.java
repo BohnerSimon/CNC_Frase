@@ -36,8 +36,8 @@ public class JsonArrayParser {
 
 
             for (int i = 0; i<commandList.size(); i++){
-                CommandCode test = parseCommandObject((JSONObject) commandList.get(i));
-                list.add(test);
+                CommandCode tempItem = parseCommandObject((JSONObject) commandList.get(i));
+                list.add(tempItem);
                 //System.out.println(list.get(i).getY());
             }
 

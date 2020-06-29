@@ -1,5 +1,8 @@
 package com.company;
 
+import org.json.simple.parser.ParseException;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -26,8 +29,8 @@ public class Main {
         //          USEING of JsonArrayParser
         //*******************BEGIN***************************
 
-        //Pfad der json Datei
-        final String path = "C:\\Users\\janni\\Desktop\\Befehlscode.json";
+        //Pfad der json Datei ->Replace durch openfile/eingabefeld
+        final String path = "C:\\Users\\janni\\iCloudDrive\\DHBW\\S2_Programmieren 2\\Projekt\\A_dateien\\Befehlscode.json";
 
         //Den Parser erstellen
         JsonArrayParser parser = new JsonArrayParser();
@@ -40,9 +43,28 @@ public class Main {
         for(int i = 0; i<commandArray.size(); i++){
             commandArray.get(i).printValues();
         }
-
         //*********************END***************************
 
+
+
+
+
+        //***************************************************
+        //          USEING of SettingsParser
+        //*******************BEGIN***************************
+
+        //Pfad der json Datei ->Replace durch openfile/eingabefeld
+        final String settingsPath = "C:\\Users\\janni\\iCloudDrive\\DHBW\\S2_Programmieren 2\\Projekt\\A_dateien\\Settings.json";
+
+        //Den Parser erstellen
+        JsonSettingsParser settingsParser = new JsonSettingsParser();
+        settingsParser.readSettings(settingsPath);
+        settingsParser.printSettings();     //ausgabe alle einstellungswerte -> Alle setzbar und holbar
+        settingsParser.setHomePosX(5);      //
+        settingsParser.printSettings();     //
+
+
+        //*********************END***************************
 
 
     }
