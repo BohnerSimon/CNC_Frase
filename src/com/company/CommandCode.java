@@ -57,6 +57,10 @@ public class CommandCode {
 		this.j = j;
 	}
 
+	public void printValues(){
+		System.out.println(pos + " " + befehl + " x" + x + " y" + y + " i"+ i +" j" +j);
+	}
+
 	public CommandCode(String pos, String befehl, double x, double y, double i, double j) {
 		this.pos = pos;
 		this.befehl = befehl;

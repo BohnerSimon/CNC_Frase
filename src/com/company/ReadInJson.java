@@ -4,6 +4,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -20,19 +22,29 @@ public class ReadInJson {
 		try {
 
 			// Datei mit Pfad einlesen
-			Object object = parser.parse(new FileReader("C:\\Users\\Philipp.mayer\\Desktop\\Befehlscode.json"));
+			Object object = parser.parse(new FileReader(path));
 
 			// Erstellen eines Json-Objektes
-			JSONObject jsonObject = (JSONObject) object;
+			JSONObject jsonCommands = (JSONObject) object;
+
+			//JSONObject jsonSingle =(JSONObject) jsonCommands.get("commands");
+
 
 			// Json Array, welches java.util.list unterstützt, in dem alle Befehle gespeichert werden
-			JSONArray commandsList = (JSONArray) jsonObject.get("commands");
-			
-//			for (int i = 0; i < commandsList.size(); i++) {
-//				
-//				System.out.println(commandsList.get(i));
-//				
-//			}
+			JSONArray commandsList = (JSONArray) jsonCommands.get("commands");
+
+
+
+
+
+			for (int i = 0; i < commandsList.size(); i++) {
+
+				System.out.println(commandsList.get(i));
+
+			}
+
+
+
 			
 			
 			//So sieht das JSON-Array ausgegeben aus
