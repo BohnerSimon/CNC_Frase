@@ -1,8 +1,13 @@
 package com.company;
 
+/**
+ * Behandlung und abarbeitung der im commandArray gespeichert und zugewiedenen Commands
+ *
+ * @author Jannik Orth
+ */
 public class CommandoHandeler {
 
-    public void cutCode (CommandCode paramList) {
+    public void cutCode(CommandCode paramList) {
 
         switch (paramList.getBefehl()) {
             case "M00": //Programmhalt

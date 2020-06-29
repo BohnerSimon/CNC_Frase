@@ -1,10 +1,8 @@
 package com.company;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -13,19 +11,22 @@ import org.json.simple.parser.ParseException;
 
 import static java.lang.Double.parseDouble;
 
+/**
+ * Liest die Befehlscode.json Datei aus dem eingegebenen Pfad ein
+ * wandelt alle Befehlscodes mit ihren Parametern in ein Array zur späteren Handhabung.
+ *
+ * @author Jannik Orth
+ */
 public class JsonArrayParser {
 
-    public ArrayList<CommandCode> parse(String path)
-    {
+    public ArrayList<CommandCode> parse(String path) {
         //JSON parser object to parse read file
         JSONParser jsonParser = new JSONParser();
         ArrayList<CommandCode> list = new ArrayList<>();
 
 
         //try (FileReader reader = new FileReader("C:\\Users\\janni\\Desktop\\Befehlscode.json"))
-        try (FileReader reader = new FileReader(path))
-
-        {
+        try (FileReader reader = new FileReader(path)) {
             //Read JSON file
             Object obj = jsonParser.parse(reader);
             //System.out.println(obj);
@@ -35,12 +36,11 @@ public class JsonArrayParser {
             //System.out.println(commandList);
 
 
-            for (int i = 0; i<commandList.size(); i++){
+            for (int i = 0; i < commandList.size(); i++) {
                 CommandCode tempItem = parseCommandObject((JSONObject) commandList.get(i));
                 list.add(tempItem);
                 //System.out.println(list.get(i).getY());
             }
-
 
 
         } catch (ParseException | IOException e) {
@@ -50,9 +50,8 @@ public class JsonArrayParser {
         return list;
     }
 
-    private CommandCode parseCommandObject(JSONObject command)
-    {
-        double i = 0,j = 0,x = 0,y = 0;
+    private CommandCode parseCommandObject(JSONObject command) {
+        double i = 0, j = 0, x = 0, y = 0;
         //Get commandObject within list
         JSONObject commandObject = (JSONObject) command.get("command");
 
@@ -69,13 +68,13 @@ public class JsonArrayParser {
         //System.out.println(paramObj);
 
         //Check if x,y and i,j is set and apply values
-        if (paramObj.get("x") != null && paramObj.get("y") != null){
+        if (paramObj.get("x") != null && paramObj.get("y") != null) {
             String xS = paramObj.get("x").toString();
             x = parseDouble(xS);
             String yS = paramObj.get("y").toString();
             y = parseDouble(yS);
 
-            if (paramObj.get("i") != null && paramObj.get("j") != null){
+            if (paramObj.get("i") != null && paramObj.get("j") != null) {
                 String iS = paramObj.get("i").toString();
                 i = parseDouble(iS);
                 String jS = paramObj.get("j").toString();
@@ -85,7 +84,7 @@ public class JsonArrayParser {
 
         //generate a new CommandCode item with values to push to the Arraylist
 
-        return new CommandCode(number, code,x,y,i,j);
+        return new CommandCode(number, code, x, y, i, j);
 
     }
 

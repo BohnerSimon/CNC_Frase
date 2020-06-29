@@ -1,6 +1,11 @@
 package com.company;
 
-public class Status{
+/**
+ * Bohrstatus updaten
+ *
+ * @author Jannik Orth
+ */
+public class Status {
     public Boolean kuehlung = false;
     //-> Kühkung ein/aus
 

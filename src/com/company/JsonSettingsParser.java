@@ -2,14 +2,20 @@ package com.company;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 
+
+/**
+ * Liest die Settings.json Datei aus dem eingegebenen Pfad ein
+ * und setzt die darin gespeicherten Werte.
+ * Gibt dem Anwender die Möglichkeit alle eingelesenen Werte ausgeben zu lassen
+ *
+ * @author Jannik Orth
+ */
 public class JsonSettingsParser {
-
+    // Deklaration aller Einstellfaktoren
     private long homePosX;
     private long homePosY;
     private long speedCooling;
@@ -102,27 +108,28 @@ public class JsonSettingsParser {
     }
 
 
-
+    /*
+     * Methode zum Einlesen der gespeicherten Einstellungen
+     */
     public void readSettings(String settingsPath) {
-        try{
-        File settings = new File (settingsPath);
+        try {
+            File settings = new File(settingsPath);
 
-        Object obj = new JSONParser().parse(new FileReader(String.valueOf(settings)));
+            Object obj = new JSONParser().parse(new FileReader(String.valueOf(settings)));
 
-        JSONObject object = (JSONObject) obj;
+            JSONObject object = (JSONObject) obj;
 
 
-
-         homePosX = (long)object.get("homePosX");
-         homePosY = (long)object.get("homePosY");
-         speedCooling = (long) object.get("speedCooling");
-         speedNoCooling = (long)object.get("speedNoCooling");
-         speedNoDrill = (long)object.get("speedNoDrill");
-         drillDiameter = (long)object.get("drillDiameter");
-         surfaceColor = object.get("surfaceColor").toString();
-         surfaceDrilledColor = (String)object.get("surfaceDrilledColor");
-         drillColor = object.get("drillColor").toString();
-         homePosColor = (String)object.get("homePosColor");
+            homePosX = (long) object.get("homePosX");
+            homePosY = (long) object.get("homePosY");
+            speedCooling = (long) object.get("speedCooling");
+            speedNoCooling = (long) object.get("speedNoCooling");
+            speedNoDrill = (long) object.get("speedNoDrill");
+            drillDiameter = (long) object.get("drillDiameter");
+            surfaceColor = object.get("surfaceColor").toString();
+            surfaceDrilledColor = (String) object.get("surfaceDrilledColor");
+            drillColor = object.get("drillColor").toString();
+            homePosColor = (String) object.get("homePosColor");
 
 
         } catch (Exception e) {
@@ -130,16 +137,20 @@ public class JsonSettingsParser {
         }
     }
 
-    public void printSettings(){
-        System.out.println("homePosX_"+homePosX);
-        System.out.println("homePosY_"+homePosY);
-        System.out.println("speedCooling_"+speedCooling);
-        System.out.println("speedNoCooling_"+speedNoCooling);
-        System.out.println("speedNoDrill_"+speedNoDrill);
-        System.out.println("drillDiameter_"+drillDiameter);
-        System.out.println("surfaceColor_"+surfaceColor);
-        System.out.println("surfaceDrilledColor_"+surfaceDrilledColor);
-        System.out.println("drillColor_"+drillColor);
-        System.out.println("homePosColor_"+homePosColor);
+
+    /*
+     * Ausgabe aller Einstellungswerte in der Konsole
+     */
+    public void printSettings() {
+        System.out.println("homePosX_" + homePosX);
+        System.out.println("homePosY_" + homePosY);
+        System.out.println("speedCooling_" + speedCooling);
+        System.out.println("speedNoCooling_" + speedNoCooling);
+        System.out.println("speedNoDrill_" + speedNoDrill);
+        System.out.println("drillDiameter_" + drillDiameter);
+        System.out.println("surfaceColor_" + surfaceColor);
+        System.out.println("surfaceDrilledColor_" + surfaceDrilledColor);
+        System.out.println("drillColor_" + drillColor);
+        System.out.println("homePosColor_" + homePosColor);
     }
 }
