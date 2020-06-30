@@ -27,9 +27,7 @@ public class JsonSettingsParser {
     private String drillColor;
     private String homePosColor;
 
-    public long getHomePosX() {
-        return homePosX;
-    }
+    public long getHomePosX() { return homePosX; }
 
     public void setHomePosX(long homePosX) {
         this.homePosX = homePosX;
@@ -55,9 +53,7 @@ public class JsonSettingsParser {
         return speedNoCooling;
     }
 
-    public void setSpeedNoCooling(long speedNoCooling) {
-        this.speedNoCooling = speedNoCooling;
-    }
+    public void setSpeedNoCooling(long speedNoCooling) { this.speedNoCooling = speedNoCooling; }
 
     public long getSpeedNoDrill() {
         return speedNoDrill;
