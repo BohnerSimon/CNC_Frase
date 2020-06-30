@@ -13,13 +13,13 @@ public class CommandoHandeler extends GUIConfig{
     public void cutCode(CommandCode paramList) {
 
         switch (paramList.getBefehl()) {
-            case "M00": //Programmhalt
+            case "M00":
                 M00(paramList);
                 break;
-            case "M02": //Programm Ende
+            case "M02":
                 M02(paramList);
                 break;
-            case "M03": // Spindel ein; Rechtslauf
+            case "M03":
                 M03(paramList);
                 break;
             case "M04":
@@ -158,6 +158,5 @@ public class CommandoHandeler extends GUIConfig{
         System.out.println("g28");
         //Homeposition
     }
-
 
 }
