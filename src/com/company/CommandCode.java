@@ -6,7 +6,7 @@ package com.company;
  *
  * @author Jannik Orth
  */
-public class CommandCode {
+public class CommandCode{
     // DatenTyp ArrayList
     private String pos;
     private String befehl;

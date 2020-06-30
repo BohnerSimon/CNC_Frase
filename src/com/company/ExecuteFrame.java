@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.security.Guard;
+
 
 /**
  * Main Methode zum Ausführen des Fensters um von dortaus über controllerKlasse
@@ -23,6 +25,8 @@ public class ExecuteFrame extends Application{
         primaryStage.setTitle("CNC Simulation");
         primaryStage.setScene(new Scene(root, 1200, 650));
         primaryStage.show();
+
+
     }
 
 
