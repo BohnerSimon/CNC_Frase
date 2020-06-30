@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.company.GUIConfig"
+            prefHeight="650.0" prefWidth="1000.0">
+    <children>
+    <AnchorPane layoutX="14.0" layoutY="16.0" prefHeight="612.0" prefWidth="209.0" style="-fx-background-color: skyblue;">
+        <children>
+            <Button fx:id="btnStart" layoutX="14.0" layoutY="560.0" mnemonicParsing="false" onAction="#handle_btnStart" prefHeight="38.0" prefWidth="89.0" text="Start" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="560.0" />
+            <Button fx:id="btnStop" layoutX="115.0" layoutY="560.0" mnemonicParsing="false" onAction="#handle_btnStop" prefHeight="38.0" prefWidth="89.0" text="Stopp" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="560.0" />
+            <Label layoutX="11.0" layoutY="12.0" text="Status" AnchorPane.leftAnchor="11.0">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Pane layoutX="30.0" layoutY="32.0">
+                <children>
+                    <Label text="xPosition" />
+                    <Label layoutY="18.0" text="yPosition" />
+                </children>
+            </Pane>
+            <Pane layoutX="30.0" layoutY="91.0">
+                <children>
+                    <Label text="Fräser" />
+                    <Label layoutY="17.0" text="Drehrichtung" />
+                    <Label layoutY="34.0" text="Kühlung" />
+                    <Label layoutY="51.0" text="Speed" />
+                </children>
+            </Pane>
+            <Button fx:id="btnLoadSettings" layoutX="14.0" layoutY="526.0" mnemonicParsing="false" onAction="#handle_btnLoadSettings" prefHeight="25.0" prefWidth="191.0" text="JSON Settings lesen" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+            <Button fx:id="btnLoadCommands" layoutX="14.0" layoutY="494.0" mnemonicParsing="false" onAction="#handle_btnloadCommands" prefHeight="25.0" prefWidth="187.0" text="JSON Commands lesen" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+            <Label layoutX="13.0" layoutY="181.0" text="Einstellungen" AnchorPane.leftAnchor="11.0">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Pane layoutX="29.0" layoutY="201.0" AnchorPane.leftAnchor="29.0">
+                <children>
+                    <Label text="homePosX" />
+                    <Label layoutY="17.0" text="homePosY" />
+                    <Label layoutY="34.0" text="speedCooling" />
+                    <Label layoutY="51.0" text="speedNoCooling" />
+                    <Label layoutY="68.0" text="speedNoDrill" />
+                    <Label layoutY="85.0" text="drillDiameter" />
+                    <Label layoutY="102.0" text="surfaceColor" />
+                    <Label layoutY="119.0" text="surfaceDrilledColor" />
+                    <Label layoutY="136.0" text="drillColor" />
+                    <Label layoutY="153.0" text="homePosColor" />
+                </children>
+            </Pane>
+            <Label layoutX="132.0" layoutY="32.0" text="X" />
+            <Label layoutX="132.0" layoutY="49.0" text="Y" />
+            <Label fx:id="lblFraser" layoutX="118.0" layoutY="91.0" text="notSet" />
+            <Label fx:id="lblDrehrichtung" layoutX="118.0" layoutY="108.0" text="notSet" />
+            <Label fx:id="lblKuhlung" layoutX="118.0" layoutY="125.0" text="notSet" />
+            <Label fx:id="lblSpeed" layoutX="118.0" layoutY="142.0" text="notSet" />
+            <Label fx:id="lblHomePosX" layoutX="153.0" layoutY="201.0" text="load!" />
+            <Label fx:id="lblHomePosY" layoutX="153.0" layoutY="218.0" text="load!" />
+            <Label fx:id="lblSpeedCooling" layoutX="153.0" layoutY="235.0" text="load!" />
+            <Label fx:id="lblSpeedNoCooling" layoutX="153.0" layoutY="252.0" text="load!" />
+            <Label fx:id="lblSpeedNoDrill" layoutX="153.0" layoutY="269.0" text="load!" />
+            <Label fx:id="lblDrillDiameter" layoutX="153.0" layoutY="286.0" text="load!" />
+            <Label fx:id="lblSurfaceColor" layoutX="153.0" layoutY="303.0" text="load!" />
+            <Label fx:id="lblSurfaceDrilledColor" layoutX="153.0" layoutY="320.0" text="load!" />
+            <Label fx:id="lblDrillColor" layoutX="153.0" layoutY="337.0" text="load!" />
+            <Label fx:id="lblHomePosColor" layoutX="153.0" layoutY="354.0" text="load!" />
+            <Line endX="108.0" layoutX="106.0" layoutY="173.0" startX="-106.0" />
+            <Line endX="112.0" layoutX="104.0" layoutY="387.0" startX="-104.0" />
+        </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

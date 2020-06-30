@@ -7,6 +7,9 @@ package com.company;
  */
 public class CommandoHandeler {
 
+    /*
+    Bekommt ein Objekt von CommandoCode übergeben und kann dann auf weitere klassen zugreifen
+     */
     public void cutCode(CommandCode paramList) {
 
         switch (paramList.getBefehl()) {
