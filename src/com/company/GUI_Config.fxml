@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.company.GUIConfig"
-            prefHeight="650.0" prefWidth="1000.0">
+
+<AnchorPane prefHeight="650.0" prefWidth="1298.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.GUIConfig">
     <children>
     <AnchorPane layoutX="14.0" layoutY="16.0" prefHeight="612.0" prefWidth="209.0" style="-fx-background-color: skyblue;">
         <children>
@@ -36,8 +33,8 @@
                     <Label layoutY="51.0" text="Speed" />
                 </children>
             </Pane>
-            <Button fx:id="btnLoadSettings" layoutX="14.0" layoutY="526.0" mnemonicParsing="false" onAction="#handle_btnLoadSettings" prefHeight="25.0" prefWidth="191.0" text="JSON Settings lesen" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
-            <Button fx:id="btnLoadCommands" layoutX="14.0" layoutY="494.0" mnemonicParsing="false" onAction="#handle_btnloadCommands" prefHeight="25.0" prefWidth="187.0" text="JSON Commands lesen" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+            <Button fx:id="btnLoadSettings" layoutX="14.0" layoutY="498.0" mnemonicParsing="false" onAction="#handle_btnLoadSettings" prefHeight="25.0" prefWidth="191.0" text="JSON Settings lesen" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+            <Button fx:id="btnLoadCommands" layoutX="14.0" layoutY="466.0" mnemonicParsing="false" onAction="#handle_btnLoadCommands" prefHeight="25.0" prefWidth="187.0" text="JSON Commands lesen" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
             <Label layoutX="13.0" layoutY="181.0" text="Einstellungen" AnchorPane.leftAnchor="11.0">
                 <font>
                     <Font size="14.0" />
@@ -75,7 +72,14 @@
             <Label fx:id="lblHomePosColor" layoutX="153.0" layoutY="354.0" text="load!" />
             <Line endX="108.0" layoutX="106.0" layoutY="173.0" startX="-106.0" />
             <Line endX="112.0" layoutX="104.0" layoutY="387.0" startX="-104.0" />
+            <Button fx:id="btnPause" layoutX="13.0" layoutY="529.0" mnemonicParsing="false" onAction="#handle_btnPause" prefHeight="25.0" prefWidth="189.0" text="Pause" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
         </children>
     </AnchorPane>
+      <TextArea fx:id="txtAreaLog" editable="false" layoutX="238.0" layoutY="44.0" prefHeight="584.0" prefWidth="152.0" />
+      <Label layoutX="238.0" layoutY="24.0" text="Logging">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
   </children>
 </AnchorPane>
