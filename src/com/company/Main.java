@@ -1,7 +1,8 @@
 package com.company;
 
 import org.json.simple.parser.ParseException;
-
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,7 @@ public class Main {
         //*******************BEGIN***************************
 
         //Pfad der json Datei ->Replace durch openfile/eingabefeld
-        final String path = "C:\\Users\\janni\\iCloudDrive\\DHBW\\S2_Programmieren 2\\Projekt\\A_dateien\\Befehlscode.json";
+        final String path = "C:\\Users\\Philipp.mayer\\Desktop\\Befehlscode.json";
 
         //Den Parser erstellen
         JsonArrayParser parser = new JsonArrayParser();

@@ -1,6 +1,7 @@
 package com.company;
 
 import org.json.simple.JSONObject;
+
 import org.json.simple.parser.JSONParser;
 
 import java.io.File;
@@ -10,7 +11,7 @@ import java.io.FileReader;
 /**
  * Liest die Settings.json Datei aus dem eingegebenen Pfad ein
  * und setzt die darin gespeicherten Werte.
- * Gibt dem Anwender die Möglichkeit alle eingelesenen Werte ausgeben zu lassen
+ * Gibt dem Anwender die Moeglichkeit alle eingelesenen Werte ausgeben zu lassen
  *
  * @author Jannik Orth
  */

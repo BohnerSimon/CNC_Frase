@@ -10,8 +10,8 @@ import java.security.Guard;
 
 
 /**
- * Main Methode zum Ausführen des Fensters um von dortaus über controllerKlasse
- * Aktionen steuern zu können
+ * Main Methode zum Ausfuehren des Fensters um von dortaus ueber controllerKlasse
+ * Aktionen steuern zu koennen
  *
  * Hier wird nur das Fenster ertellt
  *
