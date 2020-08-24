@@ -31,8 +31,8 @@ public class Main {
         //*******************BEGIN***************************
 
         //Pfad der json Datei ->Replace durch openfile/eingabefeld
-        final String path = "C:\\Users\\Philipp.mayer\\Desktop\\Befehlscode.json";
-
+        //final String path = "C:\\Users\\Philipp.mayer\\Desktop\\Befehlscode.json";
+        final String path = "C:\\Users\\bohne\\IdeaProjects\\CNC_Frase\\Files\\Json\\Befehlscode.json";
         //Den Parser erstellen
         JsonArrayParser parser = new JsonArrayParser();
 

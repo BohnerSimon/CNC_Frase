@@ -97,7 +97,8 @@ public class GUIConfig {
 
 
     public void handle_btnLoadSettings(ActionEvent actionEvent) {
-        final String settingsPath = "C:\\Users\\janni\\iCloudDrive\\DHBW\\S2_Programmieren 2\\Projekt\\A_dateien\\Settings.json";
+        //final String settingsPath = "C:\\Users\\janni\\iCloudDrive\\DHBW\\S2_Programmieren 2\\Projekt\\A_dateien\\Settings.json";
+        final String settingsPath = "C:\\Users\\bohne\\IdeaProjects\\CNC_Frase\\Files\\Json\\Settings.json";
 
         //Den Parser erstellen
         JsonSettingsParser settingsParser = new JsonSettingsParser();
@@ -110,8 +111,8 @@ public class GUIConfig {
 
 
     public void handle_btnLoadCommands(ActionEvent actionEvent) {
-        final String path = "C:\\Users\\janni\\iCloudDrive\\DHBW\\S2_Programmieren 2\\Projekt\\A_dateien\\Befehlscode.json";
-
+        //final String path = "C:\\Users\\janni\\iCloudDrive\\DHBW\\S2_Programmieren 2\\Projekt\\A_dateien\\Befehlscode.json";
+       final String path = " C:\\Users\\bohne\\IdeaProjects\\CNC_Frase\\Files\\Json\\Befehlscode.json";
         //Den Parser erstellen
         JsonArrayParser parser = new JsonArrayParser();
 
