@@ -2,12 +2,18 @@
   <library name="lib">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../../../../Java/javafx-sdk-14.0.1/lib" />
+      <root url="file://$PROJECT_DIR$/Files/javafx-sdk-14.0.2.1/lib" />
+      <root url="file://$PROJECT_DIR$/Files/Json" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://$PROJECT_DIR$/../../../../Java/javafx-sdk-14.0.1/lib" />
+      <root url="file://$PROJECT_DIR$/Files/javafx-sdk-14.0.2.1/lib" />
     </SOURCES>
     <jarDirectory url="file://$PROJECT_DIR$/../../../../Java/javafx-sdk-14.0.1/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/Files/javafx-sdk-14.0.2.1/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/Files/Json" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../../../../Java/javafx-sdk-14.0.1/lib" recursive="false" type="SOURCES" />
+    <jarDirectory url="file://$PROJECT_DIR$/Files/javafx-sdk-14.0.2.1/lib" recursive="false" type="SOURCES" />
   </library>
 </component>
